@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dari Si Cantik Buat Mas</title>
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+    :root{
+      --bg:#070616;
+      --card:#0f1220;
+      --accent:#ff7ab8;
+      --muted:#bfa4b8;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;font-family:'Poppins',sans-serif;background:linear-gradient(180deg,var(--bg),#04040a);color:#fff;display:flex;align-items:center;justify-content:center;padding:20px}
+    /* loader */
+    #loader{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(4,4,10,0.95),rgba(4,4,10,0.9));z-index:9999;flex-direction:column;gap:14px}
+    .loader-text{font-size:1.1rem;color:var(--muted);letter-spacing:0.6px}
+    .heart-beat{font-size:34px;animation:beat 1s infinite}
+    @keyframes beat{0%{transform:scale(1)}50%{transform:scale(1.25)}100%{transform:scale(1)}}
+    /* card */
+    .card{width:100%;max-width:900px;background:linear-gradient(180deg,var(--card),#081024);border-radius:18px;padding:18px;box-shadow:0 8px 40px rgba(0,0,0,0.6);position:relative;overflow:hidden}
+    header{display:flex;align-items:center;gap:14px;padding-bottom:8px}
+    .title{font-size:1.4rem;color:var(--accent);font-weight:700}
+    .sub{color:var(--muted);font-size:0.95rem}
+    .slideshow{position:relative;border-radius:12px;overflow:hidden;margin-top:12px}
+    .slideshow img{width:100%;height:auto;display:none;opacity:0;transition:opacity 1s ease-in-out}
+    .slideshow img.active{display:block;opacity:1}
+    .caption{margin-top:10px;font-weight:600;color:var(--accent);text-align:center}
+    .message{margin-top:16px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:14px;border-radius:12px;border:1px solid rgba(255,122,184,0.08);line-height:1.6;color:#f2e9f2}
+    .glow{display:inline-block;position:relative}
+    .glow::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:6px;background:linear-gradient(90deg,rgba(255,122,184,0.8),rgba(255,255,255,0.1));filter:blur(6px);opacity:0.9;border-radius:6px}
+    /* hearts falling */
+    .heart{position:fixed;left:50%;top:0;font-size:20px;opacity:0.9;pointer-events:none;animation:fall linear forwards}
+    @keyframes fall{0%{transform:translateY(-10vh) rotate(0) translateX(0);opacity:1}100%{transform:translateY(120vh) rotate(360deg) translateX(40px);opacity:0}}
+    footer{margin-top:14px;text-align:center;color:var(--muted);font-size:0.9rem}
+    audio{width:100%;margin-top:12px;display:block;border-radius:8px}
+    .controls{display:flex;gap:8px;justify-content:center;margin-top:8px}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:var(--muted);cursor:pointer}
+  </style>
+</head>
+<body>
+  <div id="loader">
+    <div class="heart-beat">💗</div>
+    <div class="loader-text">Loading cinta... sebentar yaa</div>
+  </div>
+
+  <div class="card" id="main" style="opacity:0;transform:translateY(8px)">
+    <header>
+      <div>
+        <div class="title">Dari Si Cantik Buat Mas</div>
+        <div class="sub">Kenangan kita berduaa 💗</div>
+      </div>
+    </header>
+
+    <div class="slideshow" id="slideshow">
+      <img src="WhatsApp Image 2025-11-06 at 19.13.35_43aa41d9.jpg" class="active" alt="foto1">
+      <img src="WhatsApp Image 2025-11-06 at 19.13.35_878f6ca1.jpg" alt="foto2">
+      <img src="WhatsApp Image 2025-11-06 at 19.13.35_273a9904.jpg" alt="foto3">
+      <img src="WhatsApp Image 2025-11-06 at 19.13.36_c06237a5.jpg" alt="foto4">
+    </div>
+
+    <div class="caption">Kenangan kita berduaa 💗</div>
+
+    <audio id="bg" autoplay loop preload="auto">
+      <source src="bergema_selamanya.mp3.mp3" type="audio/mpeg">
+      Browser tidak mendukung audio.
+    </audio>
+    <div class="controls">
+      <button class="btn" id="playpause">Pause</button>
+      <button class="btn" id="download">Download ZIP</button>
+    </div>
+
+    <div class="message" id="message">
+      <p>haiiiii massss, makasih yaaa buat semuanya, ade sayang banget sama masss, masss hebat banget btw heeheh, mas udah bisa ngelewatin cobaan yang datang ke massss, mas semangat yaaaa, kann kita mau nikah okeii??? xixixixi 🥰</p>
+      <p>mas kalau ada apa apa bilang ke ade jangan di pendem yaaa, maaf kalau ade terkadang masi egois :), maaf juga ade masih jelek sifatnya, mas bantu ade yaa, ade juga bantu mas😁😁, tungguin ade yaaa jangan tinggalin ade sendirian ade cuma punya mas yang sayang sama addeee</p>
+      <p>btwww kalau mas ngerasa gagal jangan menyerah yaa sayang itu mungkin teguran awal, untuk kedepannya mas tau kurangnya mas tu dimana okeyyy?, SEMANGAT SUAMI ADEEEEE XIXIXIXII💗💗</p>
+      <p>ohh iyaaa jaga diri baik baik ya, kesehatan, pola makan, rokok ga boleh banyak, GA BOLEH LIRIK LIRIK CEWEK! SENYUM! BERCANDA! BANTUIN CEWEK!!!!! AWAS AJAAAAA😡😡, ade aja disini apa apa sendiri Kok🥺</p>
+      <p>doaaa terus biar diberikan kelancaran dalm kesehariannn, ade tau mass mas lagi banyak pikiran, mas harus tenang yaa jangan sampe kuliah mas keganggu, ade tau berat, mas doaaa terus moga kedepannya ada hadiah yang indah buat mas, itu aja sihhh maaaf dan terimakasih untuk usaha yang mas usahakan buat ade, oh iya ade ada sedikit rezeki, digunakan sebaik baiknya yaaa, maafff</p>
+      <p style="font-weight:800;margin-top:8px;text-align:center">I LOVE YOU MASSSSS 💗😍🫂</p>
+    </div>
+
+    <footer>Dipersembahkan dengan cinta ❤️</footer>
+  </div>
+
+<script>
+// loader then show
+setTimeout(()=>{
+  const loader = document.getElementById('loader');
+  loader.style.transition = 'opacity 400ms';
+  loader.style.opacity = 0;
+  setTimeout(()=>loader.remove(),500);
+  const main = document.getElementById('main');
+  main.style.transition = 'opacity 500ms, transform 500ms';
+  main.style.opacity = 1;
+  main.style.transform = 'translateY(0)';
+},1400);
+
+// slideshow 4s
+const slides = document.querySelectorAll('.slideshow img');
+let idx = 0;
+setInterval(()=>{
+  slides[idx].classList.remove('active');
+  idx = (idx+1)%slides.length;
+  slides[idx].classList.add('active');
+},4000);
+
+// hearts falling
+function spawnHeart(){
+  const h = document.createElement('div');
+  h.className = 'heart';
+  h.textContent = '💗';
+  h.style.left = Math.random()*100 + '%';
+  h.style.fontSize = (14+Math.random()*26) + 'px';
+  h.style.animationDuration = (6+Math.random()*4) + 's';
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),12000);
+}
+setInterval(spawnHeart,700);
+
+// play/pause control
+const audio = document.getElementById('bg');
+const btn = document.getElementById('playpause');
+btn.addEventListener('click',()=>{
+  if(audio.paused){ audio.play(); btn.textContent='Pause'; }
+  else{ audio.pause(); btn.textContent='Play'; }
+});
+
+// download button - create zip link (client cannot create server zip reliably), show hint
+document.getElementById('download').addEventListener('click',()=>{
+  alert('Untuk mendownload versi ZIP, gunakan file yang aku kirim lewat chat (darisicantikbuatmas.zip). Jika belum ada, minta ke Ade untuk mengunduh ZIP yang aku kirim.');
+});
+
+// ensure autoplay on mobile - attempt play on first user interaction
+document.addEventListener('click',()=>{ if(audio.paused) audio.play(); }, {once:true});
+</script>
+</body>
+</html>
